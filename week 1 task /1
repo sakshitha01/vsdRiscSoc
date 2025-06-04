@@ -1,1 +1,25 @@
+//Install & Sanity-Check the Toolchain
 
+//use cd command to go to the location where .tar.gz file is present.
+
+tar -xvzf riscv-toolchain-rv32imac-x86_64-ubuntu.tar.gz (for creating a directory)
+//to check for binaries
+ls bin
+
+//adding to our path permanently
+//to edit shell config
+nano ~/.bashrc
+
+//scroll to the bottom and write
+
+export PATH="/Downnloads/opt/Riscv/bin:$Path"
+
+//ctrl O save and enter
+//ctrl x to exit
+//to apply changes
+source ~/.bashrc
+
+//Verification commands
+riscv32-unknown-elf-gcc --version
+riscv32-unknown-elf-objdump --version
+riscv32-unknown-elf-gdb --version
